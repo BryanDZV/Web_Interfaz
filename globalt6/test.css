@@ -1,0 +1,21 @@
+div {
+  position: relative;
+}
+
+.elemento-superior {
+  position: absolute;
+  z-index: 2;
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  left: 0;
+}
+
+.elemento-inferior {
+  position: absolute;
+  z-index: 1;
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  left: 65px; /* desplazar horizontalmente */
+}
