@@ -1,0 +1,249 @@
+/*  GLOBAL  */
+body {
+  font-family: Arial, Times;
+  margin: 0;
+  padding-top: 80px; /* evita solapamiento al princippio crea un spacio  */
+}
+
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20pt;
+  text-align: center;
+  text-decoration: underline;
+}
+
+h2 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 15pt;
+  color: blue;
+}
+
+/* NAVEGACIÓN FIJA  */
+#navbar {
+  position: fixed; /* pos especifica respecto al navegador no al contenido */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar a {
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+}
+
+/* LISTA MÓDULOS */
+.modulos {
+  list-style: none;
+  padding: 0 10px;
+}
+
+.modulos li {
+  margin: 6px 0;
+}
+
+.mod-nombre {
+  font-size: 12pt;
+  font-weight: normal;
+}
+
+.mod-horas {
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+/* NOTICIAS FLOTADAS Y SUPERPUESTAS sin referencia invaden otras zonas */
+.noticias-contenedor {
+  padding: 10px;
+  position: relative; /*referencia para los float/usan la posion real dela caja */
+}
+
+/*cada noticia */
+.noticia {
+  float: left;
+  width: 30%;
+  margin: 0 0 0 -20%; /* margen negativo izquierda para provocar superposición horizontal */
+  padding: 10px;
+  color: white;
+}
+
+/*solo la primera 0 */
+.noticia:first-child {
+  margin-left: 0;
+}
+
+.noticia1 {
+  background-color: #2ecc71;
+}
+.noticia2 {
+  background-color: #3498db;
+}
+.noticia3 {
+  background-color: #e74c3c;
+}
+
+/* Limpiar floats siempre*/
+.noticias-contenedor::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* 7.TIPOGRÁFICO  */
+.texto-demo {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 600;
+  color: #333;
+  text-align: justify;
+  text-decoration: none;
+  line-height: 1.6;
+  background-color: #fff7d6;
+  background-image: url("./asset/wel.jpg");
+  padding: 12px;
+}
+
+/*CAJAS CON BACKGROUND IMAGENES */
+.caja {
+  width: 30%;
+  height: 160px;
+  display: inline-block;
+  margin: 10px;
+  color: white;
+  padding: 16px;
+  font-size: 18px;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+
+/* imagen en bottom-left, sin repetir  */
+#caja1 {
+  background-image: url("./asset/aa.png");
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
+
+/*  imagen en top-right, sin repetir  */
+#caja2 {
+  color: #3498db;
+  background-image: url("./asset/asdad.jpg");
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+/* imagen centrada 50% 50% usando shorthand */
+#caja3 {
+  /* Ejemplo de shorthand: background: [imagen] [repeat] [position] / [size] [color]; */
+  background: url("./asset/asdad.jpg") no-repeat center/cover; /* shorthand que incluye image, repeat, position y size */
+}
+
+/*
+CSS COMMENTS
+- background-image: especifica la URL de la imagen de fondo.
+- background-position: indica la posición (ej: bottom left, top right, 50% 50%).
+- background-repeat: indica si la imagen se repite (repeat, no-repeat).
+- background (shorthand): permite combinar varias propiedades en una sola línea (ej: background: url('x') no-repeat center/cover #fff;)
+Otros shorthand útiles:
+- font: combina font-style, font-variant, font-weight, font-size/line-height y font-family.
+- margin: margen para las 4 direcciones (top right bottom left).
+- padding: padding para las 4 direcciones.
+- border: combina width style color.
+*/
+
+/* OPACITY  */
+.opacidad-demo {
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0.5;
+  padding: 12px;
+  color: white;
+  margin: 12px;
+}
+
+/* GALERÍA MOSAICO  */
+.mosaico img {
+  width: 23%;
+  margin: 1%;
+  float: left;
+  display: block;
+}
+
+.mosaico::after {
+  /*limpiar float*/
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* PAGINACIÓN */
+#paginacion {
+  position: relative;
+  padding: 10px 20px;
+  margin-top: 20px;
+  min-height: 30px;
+}
+
+.anterior {
+  float: left;
+}
+
+.siguiente {
+  float: right;
+}
+
+/* POSICIONAMIENTO  */
+.static-demo {
+  position: static; /* por defecto */
+  margin: 12px;
+}
+
+.relative-demo {
+  position: relative; /* contenedor relativo */
+  background: white;
+  padding: 20px;
+  margin: 12px 0;
+}
+
+.absolute-demo {
+  position: absolute; /* esto se posicionará respecto al relative-demo */
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  padding: 6px;
+}
+
+/* TRANSICIONES  */
+.transicion-demo {
+  width: 220px;
+  height: 100px;
+  background: teal;
+  transition: all 0.1s ease; /* transición suave */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.transicion-demo:hover {
+  background: black;
+  transform: scale(2.05);
+}
+
+/*  FOOTER FIJO */
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: #222;
+  color: white;
+  padding: 10px;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CREA Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- BARRA DE NAVEGACIÓN (FIJA) -->
+    <nav id="navbar">
+      <a href="#inicio">Inicio</a>
+      <a href="#noticias">Noticias</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- TÍTULO PRINCIPAL -->
+    <h1 id="inicio">Portal CREA Studio</h1>
+
+    <!--  modulos -->
+    <section id="lista-modulos">
+      <h2>Lista de Módulos</h2>
+      <ul class="modulos">
+        <li>
+          <span class="mod-nombre">Programación</span>
+          <span class="mod-horas">120h</span>
+        </li>
+        <li>
+          <span class="mod-nombre">Bases de Datos</span>
+          <span class="mod-horas">90h</span>
+        </li>
+        <li>
+          <span class="mod-nombre">Diseño de Interfaces</span>
+          <span class="mod-horas">60h</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- TRES SECCIONES DE NOTICIAS -->
+    <section id="noticias" class="noticias-contenedor">
+      <div class="noticia noticia1">
+        <h2>Noticias 1</h2>
+        <p>Resumen de la noticia 1. Texto de ejemplo para mostrar el layout.</p>
+      </div>
+
+      <div class="noticia noticia2">
+        <h2>Noticias 2</h2>
+        <p>Resumen de la noticia 2. Otro párrafo para comparación.</p>
+      </div>
+
+      <div class="noticia noticia3">
+        <h2>Noticias 3</h2>
+        <p>Resumen de la noticia 3. Más contenido para ver el solapamiento.</p>
+      </div>
+    </section>
+
+    <!-- BLOQUE DE TEXTO y LAS PROPIEDADES  -->
+    <section id="tipografia">
+      <h2>Propiedades Tipográficas</h2>
+      <p class="texto-demo">
+        font-family, font-size, font-style,
+        font-weight, color, text-align, text-decoration, line-height,
+        background-color y background-image.
+      </p>
+    </section>
+
+    <!-- CAJAS CON IMÁGENES DE FONDO  -->
+    <section id="cajas">
+      <div id="caja1" class="caja">Caja 1 (bottom-left)</div>
+      <div id="caja2" class="caja">Caja 2 (top-right)</div>
+      <div id="caja3" class="caja">Caja 3 (center)</div>
+    </section>
+
+    <!-- RECUADRO OPACITY  -->
+    <section id="opacity">
+      <div class="opacidad-demo">
+        <p>
+           <strong>opacity: 0.5;</strong>. La propiedad
+          <em>opacity</em> hace que el elemento y todo su contenido (hijos) sean
+          semitransparentes.
+        </p>
+      </div>
+    </section>
+
+    <!-- GALERÍA MOSAICO  -->
+    <section id="galeria">
+      <h2>Galería</h2>
+      <div class="mosaico">
+        <img src="./asset/wel.jpg" alt="" />
+        <img src="./asset/wel.jpg" alt="" />
+        <img src="./asset/wel.jpg" alt="" />
+        <img src="./asset/wel.jpg" alt="" />
+        <img src="./asset/wel.jpg" alt="" />
+        <img src="./asset/wel.jpg" alt="" />
+        <img src="./asset/wel.jpg" alt="" />
+        <img src="./asset/wel.jpg" alt="" />
+      </div>
+    </section>
+
+    <!-- PAGINACIÓN : "Anterior  Siguiente"  -->
+    <section id="paginacion">
+      <a class="anterior" href="#">« Anterior</a>
+
+      <a class="siguiente" href="#">Siguiente »</a>
+    </section>
+
+    <!-- POSICIONAMIENTOS-->
+    <section id="posicionamiento">
+      <div class="static-demo">Soy static (position: static)</div>
+
+      <div class="relative-demo">
+        Soy relative (position: relative)
+        <div class="absolute-demo">
+          Soy absolute (position: absolute) dentro del relative
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSICIONES  -->
+    <section id="transiciones">
+      <h2>Transiciones</h2>
+      <div class="transicion-demo">Pasa el ratón</div>
+    </section>
+
+    <!-- PIE DE PÁGINA FIJO -->
+    <footer id="footer">© 2025 Mi sitio web</footer>
+  </body>
+</html>
