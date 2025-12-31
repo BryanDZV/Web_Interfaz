@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2em;
+}
+
+nav {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+}
+nav a:hover {
+  color: rgb(43, 226, 113);
+}
+nav a:focus {
+  color: brown;
+  text-decoration: underline;
+}
+.mosaicos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mosaicos img {
+  width: 100%;
+  height: auto;
+}
+
+.mosaicos > div {
+  width: 44%;
+  padding: 1em;
+  border: 0.5em red solid;
+  margin: 1em;
+  background-color: aqua;
+  transform: scale(1);
+  transition: background-color 0.5s ease 1s, transform 0.5s ease 1s;
+}
+
+.mosaicos > div:hover {
+  background-color: blueviolet;
+  border: 0.1em green solid;
+  transform: scale(1.1);
+  transform: translateY(-5em);
+}

@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.titulo {
+  margin-left: 10em;
+}
+
+nav {
+  display: inline-block;
+}
+nav a {
+  padding: 1em;
+  text-decoration: none;
+}
+
+.mosaicos img {
+  width: 100%;
+  height: auto;
+  padding: 2em;
+  border: 0.5em red solid;
+  margin: 1em;
+}
+
+.mosaicos {
+  margin: 20px;
+}
