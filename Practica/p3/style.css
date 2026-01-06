@@ -24,7 +24,7 @@ nav a:hover {
   color: rgb(43, 226, 113);
 }
 nav a:focus {
-  color: brown;
+  color: blue;
   text-decoration: underline;
 }
 .mosaicos {
@@ -52,4 +52,5 @@ nav a:focus {
   border: 0.1em green solid;
   transform: scale(1.1);
   transform: translateY(-5em);
+  transform: rotate3d(1, 2, 3, 180deg);
 }

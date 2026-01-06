@@ -5,25 +5,64 @@
 }
 
 .titulo {
-  margin-left: 10em;
+  display: flex;
+  justify-content: center;
 }
 
 nav {
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  
+  
 }
 nav a {
-  padding: 1em;
+  
   text-decoration: none;
 }
+nav > a:focus{
+  color: blueviolet;
+  text-decoration: line-through;
+}
 
-.mosaicos img {
+section >h2{
+  display: flex;
+  justify-content: center;
+}
+
+.mosaicos-padre {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  
+}
+
+
+.mosaicos-padre img {
+  background-color: yellowgreen;
   width: 100%;
   height: auto;
-  padding: 2em;
+  padding: 1em;
   border: 0.5em red solid;
   margin: 1em;
 }
+.contenedor-tarjeta{
+  justify-items: center;
+  margin: 1em;
+  width: 33%;
+  height: auto;
+  box-shadow: 2em 1em 2em black;
+  transform: scale(1);
+  background-color: blueviolet;
+  transition: background-color 2s  ease 0.5s,transform 1s ease-in  1s, box-shadow 4s ease-in-out 0.8s;
 
-.mosaicos {
-  margin: 20px;
+  
 }
+
+.contenedor-tarjeta:hover{
+  background-color: tomato;
+  transform: scale(2);
+  box-shadow: 5em 6em 1em green;
+}
+
+
