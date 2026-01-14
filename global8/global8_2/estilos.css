@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.contenedor {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "cabecera cabecera"
+    "menu menu"
+    "contenido sidebar"
+    "pie pie";
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.cabecera {
+  grid-area: cabecera;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.menu {
+  grid-area: menu;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.contenido {
+  grid-area: contenido;
+  display: flex;
+  gap: 1rem;
+}
+
+.card {
+  flex: 1;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.pie {
+  grid-area: pie;
+  text-align: center;
+}
+
+/* Parte elegida: Opción C
+   Se mejora jerarquía visual mediante tamaños y espaciados */
+
+.cabecera {
+  font-weight: 900;
+  color: blue;
+}
+
+.card {
+  background-color: #1cc343;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "cabecera"
+      "menu"
+      "contenido"
+      "sidebar"
+      "pie";
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contenido {
+    flex-direction: column;
+  }
+}
