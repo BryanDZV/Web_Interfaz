@@ -1,0 +1,196 @@
+{
+  "GRID BASE": {
+    "prefix": "icons-grid",
+    "body": [
+      ".icons {",
+      "  display: grid;",
+      "  grid-template-columns: repeat(4, 1fr);",
+      "  gap: 40px;",
+      "}"
+    ],
+    "description": "GRID BASE (fondo iconos) - grid 4 columnas"
+  },
+  "GRID BASE - auto-fit": {
+    "prefix": "icons-grid-autofit",
+    "body": [
+      ".icons {",
+      "  display: grid;",
+      "  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));",
+      "  gap: 40px;",
+      "}"
+    ],
+    "description": "GRID con auto-fit y minmax (variación de examen)"
+  },
+  "FLEX WRAP ICONS": {
+    "prefix": "icons-flex-wrap",
+    "body": [
+      ".icons {",
+      "  display: flex;",
+      "  flex-wrap: wrap;",
+      "  gap: 40px;",
+      "}"
+    ],
+    "description": "Usar flex en vez de grid para iconos"
+  },
+  "HOVER QUE SE ADELANTA": {
+    "prefix": "icon-hover-forward",
+    "body": [
+      ".icon {",
+      "  transition: transform 0.3s ease;",
+      "  position: relative;",
+      "}",
+      ".icon:hover {",
+      "  transform: scale(1.1) translateY(-10px);",
+      "  z-index: 10;",
+      "}"
+    ],
+    "description": "Hover: se adelanta y escala"
+  },
+  "HOVER ROTATE": {
+    "prefix": "icon-hover-rotate",
+    "body": [
+      ".icon:hover {",
+      "  transform: rotate(6deg);",
+      "  transition: transform 0.3s ease;",
+      "}"
+    ],
+    "description": "Variación: rotar al hacer hover"
+  },
+  "HOVER TRANSLATEX": {
+    "prefix": "icon-hover-translatex",
+    "body": [
+      ".icon:hover {",
+      "  transform: translateX(10px);",
+      "  transition: transform 0.3s ease;",
+      "}"
+    ],
+    "description": "Variación: desplazar en X al hover"
+  },
+  "HOVER SHADOW": {
+    "prefix": "icon-hover-shadow",
+    "body": [
+      ".icon:hover {",
+      "  box-shadow: 0 10px 20px rgba(0,0,0,0.4);",
+      "  transform: translateY(-6px);",
+      "  transition: transform 0.3s ease, box-shadow 0.3s ease;",
+      "}"
+    ],
+    "description": "Añadir sombra en hover"
+  },
+  "OVERLAY PANTALLA COMPLETA": {
+    "prefix": "overlay-full",
+    "body": [
+      "#overlay {",
+      "  position: fixed;",
+      "  inset: 0;",
+      "  background: rgba(0,0,0,0.4);",
+      "  display: flex;",
+      "  justify-content: center;",
+      "  align-items: center;",
+      "  opacity: 0;",
+      "  pointer-events: none;",
+      "  transition: opacity 0.3s ease;",
+      "}"
+    ],
+    "description": "Overlay pantalla completa usando inset"
+  },
+  "OVERLAY PANTALLA COMPLETA (top-left)": {
+    "prefix": "overlay-top-left",
+    "body": [
+      "#overlay {",
+      "  position: fixed;",
+      "  top: 0;",
+      "  left: 0;",
+      "  width: 100%;",
+      "  height: 100%;",
+      "  background: rgba(0,0,0,0.4);",
+      "  display: flex;",
+      "  justify-content: center;",
+      "  align-items: center;",
+      "  opacity: 0;",
+      "  pointer-events: none;",
+      "  transition: opacity 0.3s ease;",
+      "}"
+    ],
+    "description": "Variación: usar top/left + width/height en vez de inset"
+  },
+  "ACTIVACIÓN POR ESTADO (body.open)": {
+    "prefix": "overlay-open-body",
+    "body": [
+      "body.open #overlay {",
+      "  opacity: 1;",
+      "  pointer-events: auto;",
+      "}"
+    ],
+    "description": "Activación del overlay añadiendo clase al body"
+  },
+  "ACTIVACIÓN POR ESTADO (overlay.open)": {
+    "prefix": "overlay-open",
+    "body": [
+      "#overlay.open {",
+      "  opacity: 1;",
+      "  pointer-events: auto;",
+      "}"
+    ],
+    "description": "Activación del overlay añadiendo clase al overlay"
+  },
+  "ANIMACIÓN DE LA CARPETA": {
+    "prefix": "folder-scale",
+    "body": [
+      ".folder {",
+      "  transform: scale(0.8);",
+      "  transition: transform 0.3s ease;",
+      "}",
+      "body.open .folder {",
+      "  transform: scale(1);",
+      "}"
+    ],
+    "description": "Animación básica de carpeta: escala al abrir"
+  },
+  "ANIMACIÓN CARPETA - SLIDE": {
+    "prefix": "folder-slide",
+    "body": [
+      ".folder {",
+      "  transform: translateY(50px);",
+      "  transition: transform 0.3s ease;",
+      "}",
+      "body.open .folder {",
+      "  transform: translateY(0);",
+      "}"
+    ],
+    "description": "Variación: carpeta aparece deslizando desde abajo"
+  },
+  "ESTADO CLOSING": {
+    "prefix": "folder-closing",
+    "body": [
+      "body.closing .folder {",
+      "  transform: scale(0.6);",
+      "}"
+    ],
+    "description": "Estado closing: escala hacia afuera al cerrar"
+  },
+  "CLOSING SLIDE": {
+    "prefix": "folder-closing-slide",
+    "body": [
+      "body.closing .folder {",
+      "  transform: translateY(100px);",
+      "}"
+    ],
+    "description": "Variación closing: cerrar deslizándose"
+  },
+  "BLUR DEL FONDO": {
+    "prefix": "backdrop-blur",
+    "body": [
+      "-webkit-backdrop-filter: blur(8px);",
+      "backdrop-filter: blur(8px);"
+    ],
+    "description": "Backdrop blur para fondos (incluye -webkit-)"
+  },
+  "TRANSICIONES MÚLTIPLES": {
+    "prefix": "multi-transition",
+    "body": [
+      "transition: transform 0.3s ease, opacity 0.3s ease;"
+    ],
+    "description": "Ejemplo de transición múltiple"
+  }
+}

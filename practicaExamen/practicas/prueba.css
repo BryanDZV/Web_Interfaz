@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  background: #111;
+}
+.icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 80px;
+}
+img{
+    width: 128px;
+    height: auto;
+}
+.icon {
+  height: 120px;
+  background: blue;
+  transition: transform 0.3s ease;
+}
+.icon:hover{
+     transform: scale(1.1) translateY(-10px);
+     z-index: 10;
+
+}
+#overlay{
+    position: fixed;
+  inset: 0;
+   background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(8px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+body.open #overlay{
+    opacity: 1;
+    pointer-events: auto;
+}
+.folder {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+    transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+body.open .folder {
+  transform: scale(1);
+}
+body.closing .folder {
+  transform: scale(0.6);
+}

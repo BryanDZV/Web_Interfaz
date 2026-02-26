@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuadrado</title>
+    <link rel="stylesheet" href="prueba.css" />
+  </head>
+  <body>
+    <div class="icons">
+      <img src="./tux.jpg" alt="" />
+      <img src="./tux.jpg" alt="" />
+      <img src="./tux.jpg" alt="" />
+      <img src="./tux.jpg" alt="" />
+      <img src="./tux.jpg" alt="" />
+      <img src="./tux.jpg" alt="" />
+      <img src="./tux.jpg" alt="" />
+      <img src="./tux.jpg" alt="" />
+      <img src="./tux.jpg" alt="" />
+      <img src="./tux.jpg" alt="" />
+      <img src="./tux.jpg" alt="" />
+      <img src="./tux.jpg" alt="" />
+    </div>
+    <div id="overlay">
+      <div class="folder">
+        <h1>Social Neworks</h1>
+      </div>
+    </div>
+
+    <script>
+      // guardamos el overlay (la capa de la carpeta) en una variable
+      const overlay = document.getElementById("overlay");
+
+      // seleccionamos el segundo icono del fondo (el que abre la carpeta)
+      const openFolder = document.querySelector(".icons img:nth-child(2)");
+
+      // abrimos la carpeta automáticamente al cargar la página
+      setTimeout(() => {
+        // añadimos la clase "open" al body para activar la animación de apertura
+        document.body.classList.add("open");
+      }, 50);
+
+      // añadimos un evento de click al overlay
+      overlay.addEventListener("click", function (e) {
+        // comprobamos si el click fue fuera de la carpeta (en el fondo del overlay)
+        if (e.target === overlay) {
+          // quitamos la clase "open" para iniciar el cierre
+          document.body.classList.remove("open");
+
+          // añadimos la clase "closing" para activar la animación de cierre
+          document.body.classList.add("closing");
+
+          // esperamos a que termine la animación de cierre
+          setTimeout(() => {
+            // eliminamos la clase "closing" para dejar el estado limpio
+            document.body.classList.remove("closing");
+          }, 400);
+        }
+      });
+
+      // añadimos un evento de click al segundo icono
+      openFolder.addEventListener("click", () => {
+        // quitamos la clase "closing" por si estaba activa
+        document.body.classList.remove("closing");
+
+        // añadimos la clase "open" para volver a abrir la carpeta
+        document.body.classList.add("open");
+      });
+    </script>
+  </body>
+</html>

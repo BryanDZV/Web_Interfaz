@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EXAMEN</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- FONDO ICONOS -->
+    <div class="icons">
+      <img class="icon" src="tux.jpg" />
+      <img class="icon" src="tux.jpg" />
+      <img class="icon" src="tux.jpg" />
+      <img class="icon" src="tux.jpg" />
+      <img class="icon" src="tux.jpg" />
+      <img class="icon" src="tux.jpg" />
+    </div>
+
+    <!-- OVERLAY -->
+    <div id="overlay">
+      <div class="folder">
+        <h2>Social Networks</h2>
+
+        <div class="modal-grid">
+          <div class="modal-icon"></div>
+          <div class="modal-icon"></div>
+          <div class="modal-icon"></div>
+          <div class="modal-icon"></div>
+          <div class="modal-icon"></div>
+          <div class="modal-icon"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const overlay = document.getElementById("overlay");
+      const openFolder = document.querySelector(".icons img:nth-child(2)");
+
+      setTimeout(() => {
+        document.body.classList.add("open");
+      }, 50);
+
+      overlay.addEventListener("click", function (e) {
+        if (e.target === overlay) {
+          document.body.classList.remove("open");
+          document.body.classList.add("closing");
+
+          setTimeout(() => {
+            document.body.classList.remove("closing");
+          }, 400);
+        }
+      });
+
+      openFolder.addEventListener("click", () => {
+        document.body.classList.remove("closing");
+        document.body.classList.add("open");
+      });
+    </script>
+  </body>
+</html>

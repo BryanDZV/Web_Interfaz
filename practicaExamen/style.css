@@ -1,0 +1,71 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #222;
+}
+
+.folder {
+  width: 32rem;
+  padding: 3rem;
+  background: white;
+  border-radius: 2rem;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.icons {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.icon {
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.icon:hover {
+  transform: scale(1.1) translateY(-10px);
+  z-index: 10;
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+body.closing .folder {
+  transform: scale(0.6);
+}
+
+.icon {
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.icon:hover {
+  transform: scale(1.1) translateY(-10px);
+  z-index: 10;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dinamico</title>
+    <link rel="stylesheet" href="dinamico.css" />
+  </head>
+  <body>
+    <main>
+      <button id="open">Abrir</button>
+
+      <div id="overlay">
+        <div class="modal">
+          <button id="close">Cerrar</button>
+          <h2>Contenido</h2>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const overlay = document.getElementById("overlay");
+      const openBtn = document.getElementById("open");
+      const closeBtn = document.getElementById("close");
+
+      openBtn.addEventListener("click", () => {
+        document.body.classList.add("open");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        document.body.classList.remove("open");
+      });
+
+      overlay.addEventListener("click", function (e) {
+        if (e.target === overlay) {
+          document.body.classList.remove("open");
+        }
+      });
+    </script>
+  </body>
+</html>
